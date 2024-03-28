@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Guidance System</title>
+
+    <!-- BootStrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ===== CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/styles.css') }}"
+    />
+
+    <!--===== MAIN JS =====-->
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='assets/js/main.js') }}"
+    ></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="header__logo">Our System</a>
+
+      <i class="bx bx-menu header__toggle" id="header-toggle"></i>
+
+      <nav class="nav" id="nav-menu">
+        <div class="nav__content bd-grid">
+          <a href="" class="nav__perfil">
+            <div class="nav__img">
+              <img
+                src="{{ url_for('static', filename='assets/img/logo.jpg') }}"
+                width="50"
+                height="82"
+                alt="Logo"
+              />
+            </div>
+          </a>
+
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="{{ url_for('home') }}" class="nav__link active"
+                  >Home</a
+                >
+              </li>
+
+              <li class="nav__item dropdown">
+                <a href="#" class="nav__link dropdown__link"
+                  >About us <i class="bx bx-chevron-down dropdown__icon"></i
+                ></a>
+
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item">
+                <a href="{{ url_for('predict_your_path') }}" class="nav__link"
+                  >Predict Your Path</a
+                >
+              </li>
+
+              <li class="nav__item dropdown">
+                <a href="#" class="nav__link dropdown__link"
+                  >Works <i class="bx bx-chevron-down dropdown__icon"></i
+                ></a>
+
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item">
+                <a href="#" class="nav__link">Explore Careers</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">FAQs</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <center>
+      <br />
+      <br /><br />
+      <h3>
+        Considering the information provided about your skills and abilities,
+        the anticipated job role would likely will be:
+      </h3>
+      <h1>{{ data }}</h1>
+
+      <br /><br />
+
+      <a href="{{ url_for('home') }}">Go back to home page</a><br />
+      <img
+        src="{{ url_for('static', filename='assets/img/career_logo.png') }}"
+        width="600"
+        height="400"
+        alt="Logo"
+      />
+    </center>
+  </body>
+</html>

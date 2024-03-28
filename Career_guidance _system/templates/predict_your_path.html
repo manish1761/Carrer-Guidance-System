@@ -1,0 +1,450 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Guidance System</title>
+
+    <!-- BootStrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ===== CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/custom.css') }}"
+    />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/styles.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100;0,200;0,300;0,400;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <!--===== MAIN JS =====-->
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='assets/js/main.js') }}"
+    ></script>
+
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="header__logo">Our System</a>
+
+      <i class="bx bx-menu header__toggle" id="header-toggle"></i>
+
+      <nav class="nav" id="nav-menu">
+        <div class="nav__content bd-grid">
+          <a href="" class="nav__perfil">
+            <div class="nav__img">
+              <img
+                src="{{ url_for('static', filename='assets/img/logo.jpg') }}"
+                width="50"
+                height="82"
+                alt="Logo"
+              />
+            </div>
+          </a>
+
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="{{ url_for('home') }}" class="nav__link active">Home</a>
+              </li>
+
+              <li class="nav__item dropdown">
+                <a href="#" class="nav__link dropdown__link"
+                  >About us <i class="bx bx-chevron-down dropdown__icon"></i
+                ></a>
+
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item">
+                <a href="{{ url_for('predict_your_path') }}" class="nav__link"
+                  >Predict Your Path</a
+                >
+              </li>
+
+              <li class="nav__item dropdown">
+                <a href="#" class="nav__link dropdown__link"
+                  >Works <i class="bx bx-chevron-down dropdown__icon"></i
+                ></a>
+
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item">
+                <a href="#" class="nav__link">Explore Careers</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">FAQs</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+ 
+
+    <div class="container">
+      <header class="header1">
+        <h1 id="title">
+          <br><br> 
+          <center>To get Started, Answere these following questions!!! </center> 
+        </h1>
+    <br>
+      <center>
+        <form id="survey-form", method="POST", action="{{ url_for('predict_your_path') }}">
+          <div class="form-group">
+            <label for="score">Academic percentage in Operating Systems</label>
+            <input
+              type="number"
+              name="name1"
+              id="name1"
+              class="formcontrol"
+              placeholder="In percentage (1-100%)"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="score">Academic percentage in Algorithms</label>
+            <input
+              type="number"
+              name="name2"
+              id="name2"
+              class="formcontrol"
+              placeholder="In percentage (1-100%)"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="score"
+              >Academic percentage in Programming concepts</label
+            >
+            <input
+              type="number"
+              name="name3"
+              id="name3"
+              class="formcontrol"
+              placeholder="In percentage (1-100%)"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="score"
+              >Academic percentage in Software Engineering</label
+            >
+            <input
+              type="number"
+              name="name4"
+              id="name4"
+              class="formcontrol"
+              placeholder="In percentage (1-100%)"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="score">Academic percentage in Computer Networks</label>
+            <input
+              type="number"
+              name="name5"
+              id="name5"
+              class="formcontrol"
+              placeholder="In percentage (1-100%)"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="score"
+              >Academic percentage in Computer Architecture</label
+            >
+            <input
+              type="number"
+              name="name6"
+              id="name6"
+              class="formcontrol"
+              placeholder="In percentage (1-100%)"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="score">Academic percentage in Mathematics</label>
+            <input
+              type="number"
+              name="name7"
+              id="name7"
+              class="formcontrol"
+              placeholder="In percentage (1-100%)"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="score"
+              >Academic percentage in Communications Skills</label
+            >
+            <input
+              type="number"
+              name="name8"
+              id="name8"
+              class="formcontrol"
+              placeholder="In percentage (1-100%)"
+              required
+            />
+          </div>
+          
+          <div class="form-group">
+            <label for="score">Maximum working hour </label>
+            <input
+              type="number"
+              name="name9"
+              id="name9"
+              class="formcontrol"
+              placeholder="In Hours(under 12)"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="score">Logical Reasoning</label>
+            <input
+             type="number"
+              name="name10"
+              id="name10"
+              class="formcontrol"
+              placeholder="level(1-10)"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="score">Number of Hackathons</label>
+            <input
+              type="number"
+              name="name11"
+              id="name10"
+              class="formcontrol"
+              placeholder="Count"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="score">Coding Skills</label>
+            <input
+              type="number"
+              name="name12"
+              id="name12"
+              class="formcontrol"
+              placeholder="level(1-10)"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="score">Public Speaking </label>
+            <input
+              type="number"
+              name="name13"
+              id="name13"
+              class="formcontrol"
+              placeholder="level(1-10)"
+              required
+            />
+          </div>
+         
+          <div class="form-group">
+  <p id="quest">Self Learning Capability</p>
+  <label for="yesRadio">
+    <input
+      type="radio"
+      id="yesRadio"
+      name="name14"
+      value="YES"
+      class="inputRadio"
+    />YES
+  </label>
+  <label for="noRadio">
+    <input
+      type="radio"
+      id="noRadio"
+      name="name14"
+      value="no"
+      class="inputRadio"
+    />NO
+  </label>
+</div>
+
+ <div class="form-group">
+            <label for="score">Any certifications?</label>
+            <input
+              type="text"
+              name="name15"
+              id="name15"
+              class="formcontrol"
+              placeholder="Write here"
+              required
+            />
+          </div>
+          
+          
+          <div class="form-group">
+            <p id="quest">Reading and Writing Skills</p>
+            <select name="name16" id="dropdown1" class="formcontrol" required>
+              <option value="" disabled selected>Select</option>
+              <option value="man">EXCELLENT</option>
+              <option value="tech">MEDIUM</option>
+              <option value="tech">POOR</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="score">Feild of Interest?</label>
+            <input
+              type="text"
+              name="name17"
+              id="name17"
+              class="formcontrol"
+              placeholder="Write here"
+              required
+            />
+          </div>
+         
+
+          <div class="form-group">
+            <p id="quest">Interested in Sports?</p>
+            <label for="">
+              <input
+                type="radio"
+                name="name18"
+                value="YES"
+                class="inputRadio"
+                checked
+              />YES
+            </label>
+            <label for="">
+              <input
+                type="radio"
+                name="name18"
+                value="no"
+                class="inputRadio"
+                checked
+              />NO
+            </label>
+          </div>
+
+
+          <div class="form-group">
+            <p id="quest">Interested types of Books</p>
+            <select name="name19" id="dropdown2" class="formcontrol" required>
+              <option value="" disabled selected>Select</option>
+              <option value="man">Prayer books</option>
+              <option value="tech">Childrens</option>
+              <option value="man">Romance</option>
+              <option value="tech">Cookbooks</option>
+              <option value="man">Self help</option>
+              <option value="tech">Drama</option>
+              <option value="man">Math</option>
+              <option value="tech">Religion-Spirituality</option>
+              <option value="man">Anthology</option>
+              <option value="tech">Trilogy</option>
+              <option value="man">Autobiographies</option>
+              <option value="tech">Mystery</option>
+              <option value="man">Diaries</option>
+              <option value="tech">Journals</option>
+              <option value="man">History</option>
+              <option value="tech">Art</option>
+              <option value="tech">Dictionaries</option>
+              <option value="man">Horror</option>
+              <option value="tech">Encyclopedias</option>
+              <option value="tech">Action and Adventure</option>
+              <option value="man">Fantasy</option>
+              <option value="tech">Comics</option>
+              <option value="tech">Science fiction</option>
+              <option value="man">Series</option>
+              <option value="tech">Guide</option>
+              <option value="tech">Biographies</option>
+              <option value="man">Health</option>
+              <option value="tech">Satire</option>
+              <option value="tech">Science</option>
+              <option value="man">Poetry</option>
+            </select>
+          </div>
+
+
+
+
+          <div class="form-group">
+            <p id="quest">Interested in Management or technical</p>
+            <select name="name20" id="dropdown3" class="formcontrol" required>
+              <option value="" disabled selected>Select</option>
+              <option value="man">Management</option>
+              <option value="tech">Technical</option>
+            </select>
+          </div>
+
+
+          <div class="form-group" >
+            <p id="quest">Worked in Teams Ever?</p>
+            <label for="">
+              <input
+                type="radio"
+                name="name21"
+                value="YES"
+                class="inputRadio"
+                checked
+              />YES
+            </label>
+            <label for="">
+              <input
+                type="radio"
+                name="name21"
+                value="no"
+                class="inputRadio"
+                checked
+              />NO
+            </label>
+          </div>
+           
+        </b>
+        <h1>
+        <input type="submit" , value="Submit" /> 
+        </h1>
+        </form>
+    
+    </div>
+  </body>
+</html>

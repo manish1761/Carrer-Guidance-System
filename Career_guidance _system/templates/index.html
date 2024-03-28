@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ===== CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/style_home.css') }}"
+    />
+    
+
+    <!--===== MAIN JS =====-->
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='assets/js/main.js') }}"
+    ></script>
+
+    <title>Career Guidance system</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="header__logo">Our System</a>
+
+      <i class="bx bx-menu header__toggle" id="header-toggle"></i>
+
+      <nav class="nav" id="nav-menu">
+        <div class="nav__content bd-grid">
+          <a href="" class="nav__perfil">
+            <div class="nav__img">
+              <img
+                src="{{ url_for('static', filename='assets/img/logo.jpg') }}"
+                width="50"
+                height="82"
+                alt="Logo"
+              />
+            </div>
+          </a>
+
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link active">Home</a>
+              </li>
+
+              <li class="nav__item dropdown">
+                <a href="#" class="nav__link dropdown__link"
+                  >About us <i class="bx bx-chevron-down dropdown__icon"></i
+                ></a>
+
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item">
+                <a href="predict_your_path" class="nav__link"
+                  >Predict Your Path</a
+                >
+              </li>
+
+              <li class="nav__item dropdown">
+                <a href="#" class="nav__link dropdown__link"
+                  >Works <i class="bx bx-chevron-down dropdown__icon"></i
+                ></a>
+
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">YetToDiscover</a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- class="nav__link text-warning" -->
+
+              <li class="nav__item">
+                <a href="#" class="nav__link">Explore Careers</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">FAQs</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <br /><br />
+    <center>
+    <br /><br />
+    <div class="bgAnimation" id="bgAnimation">
+      <div class="backgroundAmim"></div>
+    </div>
+    <div class="container">
+      <section> 
+        <div class="textBox">
+          <h1><span>Welcome to Career Guidance System - Your Path to Success!</span></h1>
+          <br>
+          <p>
+            Are you ready to embark on a journey of self-discovery and career exploration? Look no further! Career Guidance System is your ultimate destination for personalized career guidance.
+          </p>
+          <a href="{{ url_for('predict_your_path') }}">
+          <button
+            class="homeBtn"
+            style="--i:#fff;"
+          >
+            Predict your path
+            </a>
+          </button>
+        
+          <a href="{{ url_for('home') }}">
+          <button
+            class="homeBtn"
+            style="--i:#00bfff;" 
+          >
+            Explore
+            </a>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    </center>
+
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='assets/js/script.js') }}"
+    ></script>
+    <br /><br />
+
+    <section class="team">
+      <div class="center">
+        <h1>Our Team</h1>
+      </div>
+
+      <div class="team-content">
+        <div class="box">
+          <img
+            src="{{ url_for('static', filename='assets/img/01.png') }}"
+            width="60"
+            height="60"
+            alt="Logo"
+          />
+          <h3>Akash Gupta</h3>
+          <h5>Member-1</h5>
+          <div class="icons">
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-facebook-box-fill"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            src="{{ url_for('static', filename='assets/img/02.png') }}"
+            width="60"
+            height="60"
+            alt="Logo"
+          />
+          <h3>Manish Jaiswal</h3>
+          <h5>Member-2</h5>
+          <div class="icons">
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-facebook-box-fill"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            src="{{ url_for('static', filename='assets/img/03.png') }}"
+            width="60"
+            height="60"
+            alt="Logo"
+          />
+          <h3>Rohit Peter</h3>
+          <h5>Member-3</h5>
+          <div class="icons">
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-facebook-box-fill"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            src="{{ url_for('static', filename='assets/img/04.png') }}"
+            width="60"
+            height="60"
+            alt="Logo"
+          />
+          <h3>Sri Vamshika</h3>
+          <h5>Member-4</h5>
+          <div class="icons">
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-facebook-box-fill"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
